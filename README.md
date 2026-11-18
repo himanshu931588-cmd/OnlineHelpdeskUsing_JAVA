@@ -259,9 +259,9 @@ The database is pre-seeded with initial accounts for immediate evaluation:
 
 | Role | Username | Password | Profile / Department |
 | :--- | :--- | :--- | :--- |
-| **Customer / Student** | `himanshu` | `user123` | Himanshu (Leader) - Student |
-| **Hardware Agent** | `shubham` | `agent123` | Shubham - Hardware Support |
-| **Software Agent** | `sameer` | `agent123` | Sameer - Software Support |
+| **Customer / Student** | `Himanshu` | `user123` | Himanshu (Leader) - Student |
+| **Hardware Agent** | `Shubham` | `agent123` | Shubham - Hardware Support |
+| **Software Agent** | `Sameer` | `agent123` | Sameer - Software Support |
 | **Network & Service Agent**| `khushveer` | `agent123` | Khushveer - Network & Systems |
 | **Administrator** | `admin` | `admin123` | System Administrator |
 
