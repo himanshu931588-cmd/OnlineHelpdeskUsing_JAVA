@@ -13,6 +13,9 @@
   <b>A full-featured, enterprise-grade desktop incident logging, ticket dispatch, SLA escalation, and feedback management system built with Core Java, Object-Oriented Design, and JDBC.</b>
 </p>
 
+### 🌐 [Click Here to Open Live Web Interactive Demo](https://himanshu931588-cmd.github.io/OnlineHelpdeskUsing_JAVA/)
+
+[Live Web Demo](https://himanshu931588-cmd.github.io/OnlineHelpdeskUsing_JAVA/) •
 [Key Features](#-key-features) •
 [System Architecture](#-system-architecture) •
 [OOP Concepts](#-object-oriented-programming-concepts-applied) •
