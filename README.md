@@ -5,6 +5,7 @@
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
 ![Swing](https://img.shields.io/badge/GUI-Java_Swing-007396?style=for-the-badge)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
 
@@ -186,6 +187,8 @@ OOPSProject/
 │           └── TeamInfoPanel.java        # Architecture & Team Overview
 ├── schema.sql                            # Standalone SQL Schema DDL
 ├── helpdesk.db                           # Pre-seeded SQLite Database
+├── Dockerfile                            # Docker Containerization Specification
+├── .dockerignore                         # Docker Build Ignore Rules
 ├── build_and_run.bat                     # Windows One-Click Compiler & Launcher
 ├── compile.bat                           # Source Code Compilation Batch
 ├── run.bat                               # Direct Launcher Batch
@@ -250,6 +253,42 @@ Simply double-click the included batch scripts:
 2. Add all `.jar` files in the `lib/` directory to the project's **Libraries / Classpath**.
 3. Locate `src/com/helpdesk/Main.java`.
 4. Right-click and choose **Run 'Main.main()'**.
+
+---
+
+### Option D: Run with Docker 🐳
+
+You can build and run the entire application inside a containerized environment using the provided `Dockerfile`.
+
+1. **Build the Docker Image**:
+   ```bash
+   docker build -t helpdesk-system .
+   ```
+
+2. **Run the Container (with GUI Display Forwarding)**:
+   - **Linux**:
+     ```bash
+     xhost +local:docker
+     docker run -it --rm \
+       -e DISPLAY=$DISPLAY \
+       -v /tmp/.X11-unix:/tmp/.X11-unix \
+       --net=host \
+       helpdesk-system
+     ```
+   - **Windows (WSLg / VcXsrv)**:
+     ```bash
+     # With VcXsrv or Xming running on Windows:
+     docker run -it --rm \
+       -e DISPLAY=host.docker.internal:0.0 \
+       helpdesk-system
+     ```
+   - **macOS (XQuartz)**:
+     ```bash
+     xhost + 127.0.0.1
+     docker run -it --rm \
+       -e DISPLAY=docker.for.mac.host.internal:0 \
+       helpdesk-system
+     ```
 
 ---
 
